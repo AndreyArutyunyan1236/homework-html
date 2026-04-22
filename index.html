@@ -43,7 +43,48 @@
                 <span>The university is known for its <i>strong emphasis on practical and technical training, combining theoretical knowledge with hands-on experience.</i> Many laboratories, research centers, and partnerships with industry help students <u>gain real-world skills.</u></span>
             </div>
         </div>
-        <div class="container-two">
+
+        <hr width="1000vh" style="justify-items: center; border: 0.1px solid rgba(231, 231, 231, 0.644);">
+        <h2 class="card-h2">announcement</h2>
+        <div class="cards-container">
+            <div class="card">
+                <img class="card-image" src="images/card-1.png" alt="">
+                <p class="card-p">The National Polytechnic University of Armenia and Quantori Academy are launching a joint curriculum, Applied Python: From Web Apps to Data Pipelines.</p>
+            </div>
+            <div class="card">
+                <img class="card-image" src="images/card-2.png" alt="">
+                <p class="card-p">Armenian Code Academy is organizing a Higher Mathematics Olympiad in collaboration with partner technology companies.</p>
+            </div>
+            <div class="card">
+                <img class="card-image" src="images/card-3.png" alt="">
+                <p class="card-p">The Polytechnic Institute of Bragança announces the organization of a unique internationalization project for faculty members.</p>
+            </div>
+        </div>
+
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="images/card-1.png">
+                <p class="slide-caption">Applied Python course launched with Quantori Academy</p>
+            </div>
+
+            <div class="slide fade">
+                <img src="images/card-2.png">
+                <p class="slide-caption">Higher Mathematics Olympiad by Armenian Code Academy</p>
+            </div>
+
+            <div class="slide fade">
+                <img src="images/card-3.png">
+                <p class="slide-caption">International project by Polytechnic Institute of Bragança</p>
+            </div>
+
+            <div class="prev" onclick="plusDivs(-1)">&#10094;</div>
+            <div class="next" onclick="plusDivs(1)">&#10095;</div>
+        </div>
+
+        <div class="dots-container">
+            <span class="dot" onclick="currentDiv(1)"></span>
+            <span class="dot" onclick="currentDiv(2)"></span>
+            <span class="dot" onclick="currentDiv(3)"></span>
         </div>
     </div>
 
@@ -55,5 +96,39 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function plusDivs(n) {
+            slideIndex += n;
+            showSlides();
+        }
+
+        function currentDiv(n) {
+            slideIndex = n - 1;
+            showSlides();
+        }
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+
+            if (slideIndex >= slides.length) slideIndex = 0;
+            if (slideIndex < 0) slideIndex = slides.length - 1;
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("active");
+            }
+
+            slides[slideIndex].style.display = "block";
+            dots[slideIndex].classList.add("active");
+        }
+    </script>
 </body>
 </html>
