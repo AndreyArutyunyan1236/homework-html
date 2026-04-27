@@ -5,42 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In - NPUA</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Raleway:wght@300;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <a href="index.html">
-                <img class="logo-image" src="images/polytechnic_logo-Photoroom.png">
-            </a>
-        </div>
-        <div class="header-text">
-            <div class="blank"></div>
-            <div class="header-text-inner">
-                <a href="index.html"><div class="nav-btn"><p>HOME</p></div></a>
-                <a href="signin.html"><div class="nav-btn"><p>SIGN IN</p></div></a>
-                <a href="about.html"><div class="nav-btn"><p>ABOUT US</p></div></a>
-            </div>
-        </div>
-    </header>
 
-    <div class="page-content">
-        <div class="form-container">
-            <h1>Sign In</h1>
-            <form>
-                <input type="text" placeholder="Username" required>
-                <input type="password" placeholder="Password" required>
-                <button type="submit">LOGIN</button>
-            </form>
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img class="logo-image" src="images/polytechnic_logo-Photoroom.png">
+        </a>
+    </div>
+    <div class="header-text">
+        <div class="blank"></div>
+        <div class="header-text-inner">
+            <a href="index.html"><div class="nav-btn"><p>HOME</p></div></a>
+            <a href="signin.html"><div class="nav-btn"><p>SIGN IN</p></div></a>
+            <a href="about.html"><div class="nav-btn"><p>ABOUT US</p></div></a>
         </div>
     </div>
+</header>
 
-    <footer>
-        <div class="footer-div">
-            <div class="footer-div-inner">
-                <pre>To Contact Us: +374 676 767</pre>
-                <pre>Email: qwerty1236@gmail.com</pre>
+<div class="page-content">
+    <div class="form-container advanced">
+
+        <h1 class="form-title">SIGN IN</h1>
+        <p class="form-subtitle">Enter your credentials to continue</p>
+
+        <form>
+            <div class="input-group">
+                <input type="text" required>
+                <label>Username</label>
             </div>
+
+            <div class="input-group">
+                <input type="password" required>
+                <label>Password</label>
+            </div>
+
+            <button type="submit">LOGIN</button>
+        </form>
+        <p class="extra-text">Don't have an account? <span>Create one</span></p>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-div">
+        <div class="footer-div-inner">
+            <pre>To Contact Us: +374 676 767</pre>
+            <pre>Email: qwerty1236@gmail.com</pre>
         </div>
-    </footer>
+    </div>
+</footer>
 </body>
 </html>

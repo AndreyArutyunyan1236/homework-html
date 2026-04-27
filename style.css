@@ -1,5 +1,5 @@
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: white;
     background-color: rgba(0, 35, 53, 0.637);
     margin: 0;
@@ -30,7 +30,7 @@ header {
 }
 
 .header-text {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Orbitron', sans-serif;
     display: flex;
 }
 
@@ -54,6 +54,7 @@ p {
     padding: 1vh;
     font-size: 2.7vh;
     color: white;
+    font-family: 'Raleway', sans-serif;
 }
 
 .nav-btn p {
@@ -67,16 +68,13 @@ p {
 
 .container {
     flex: 1;
+    box-shadow: inset 0 0 100vh rgba(0, 20, 31, 0.932);
 }
 
 .container-one {
     flex-wrap: wrap;
     display: flex;
     justify-content: space-around;
-}
-
-.container {
-    box-shadow: inset 0 0 100vh rgba(0, 20, 31, 0.932);
 }
 
 .page-content {
@@ -101,18 +99,18 @@ p {
     box-shadow: inset 0 0 100vh rgba(0, 20, 31, 0.932);
     border-radius: 10px;
     margin: 0vh 14vh 8vh 10vh;
-    padding: 1vh 1vh 1vh 1vh;
+    padding: 1vh;
     justify-items: center;
-    transition: box-shadow 0.5s ease;
+    transition: 0.5s;
 }
 
 .card:hover {
     box-shadow: inset 0 0 10px rgb(0, 1, 48);
     text-shadow: 0 0 4px rgb(0, 0, 0);
+    transform: translateY(-1vh) scale(1.03);
 }
 
 .card-image {
-    border: 0px solid rgba(255, 255, 255, 0.74);
     border-radius: 30px;
     display: flex;
     justify-content: center;
@@ -121,56 +119,49 @@ p {
 }
 
 .card-p {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: inline-block;
     text-align: center;
+    font-family: 'Raleway', sans-serif;
 }
 
 .card-h2 {
     display: flex;
     justify-content: center;
-
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.2vh;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+    font-size: 3vh;
 }
 
 .title-p {
     width: 40vh;
     text-align: justify;
+    font-family: 'Raleway', sans-serif;
 }
 
 .title-h1 {
     display: flex;
     justify-content: center;
     width: 40vh;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4vh;
+    letter-spacing: 0.2vh;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
 }
 
 .man-image {
     animation: squareMove 4s alternate-reverse infinite;
     margin-top: 10vh;
     z-index: 1;
+    height: 30vh;
 }
 
 @keyframes squareMove {
-    0% {
-        transform: translate(0, 0);
-        transform: rotateZ(90deg); 
-    }
-    25% {
-        transform: translate(30vh, 0);
-    }
-    50% {
-        transform: translate(30vh, 30vh);
-    }
-    75% {
-        transform: translate(0, 30vh);
-    }
-    100% {
-        transform: translate(0, 0);
-        transform: rotateZ(120deg); 
-    }
-}
-
-.man-image {
-    height: 30vh;
+    0% { transform: translate(0, 0) rotateZ(90deg); }
+    25% { transform: translate(30vh, 0); }
+    50% { transform: translate(30vh, 30vh); }
+    75% { transform: translate(0, 30vh); }
+    100% { transform: translate(0, 0) rotateZ(120deg); }
 }
 
 .form-container,
@@ -184,15 +175,14 @@ p {
     text-align: center;
 }
 
+.about-container {
+    margin: 4vh;
+}
+
 .footer-div {
     display: flex;
     justify-content: center;
 }
-
-.cards-container {
-    display: flex;
-}
-
 
 form {
     display: flex;
@@ -221,6 +211,7 @@ button {
 button:hover {
     background: rgba(255, 255, 255, 0.3);
     box-shadow: 0 0 10px white;
+    transform: scale(1.05);
 }
 
 footer {
@@ -260,6 +251,7 @@ pre {
 .slide-caption {
     padding: 1vh;
     font-size: 2vh;
+    font-family: 'Raleway', sans-serif;
 }
 
 .prev, .next {
@@ -307,6 +299,143 @@ pre {
 }
 
 @keyframes fadeEffect {
-    from {opacity: 0.4;}
-    to {opacity: 1;}
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+.form-container.advanced {
+    width: 45%;
+    animation: fadeIn 0.8s ease;
+}
+
+.form-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5vh;
+    letter-spacing: 0.3vh;
+    margin-bottom: 1vh;
+    text-shadow: 0 0 10px rgba(255,255,255,0.4);
+}
+
+.form-subtitle {
+    font-size: 2vh;
+    margin-bottom: 3vh;
+    color: rgba(255,255,255,0.7);
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 3vh;
+}
+
+.input-group input {
+    width: 100%;
+    padding-left: 0vh;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 10px;
+    color: white;
+    font-size: 2vh;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group label {
+    position: absolute;
+    left: 1.5vh;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255,255,255,0.6);
+    font-size: 2vh;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus,
+.input-group input:valid {
+    border-color: white;
+    box-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+    top: -1vh;
+    font-size: 1.5vh;
+    color: wheat;
+}
+
+.extra-text {
+    margin-top: 2vh;
+    font-size: 1.8vh;
+    color: rgba(255,255,255,0.7);
+}
+
+.extra-text span {
+    color: wheat;
+    cursor: pointer;
+}
+
+.extra-text span:hover {
+    text-shadow: 0 0 8px white;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(2vh); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.about-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4vh;
+    letter-spacing: 0.3vh;
+    margin-bottom: 2vh;
+    text-shadow: 0 0 15px rgba(255,255,255,0.4);
+}
+
+.about-intro {
+    font-size: 2.2vh;
+    margin-bottom: 4vh;
+    color: rgba(255,255,255,0.85);
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3vh;
+    margin-bottom: 5vh;
+    flex-wrap: wrap;
+}
+
+.about-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.about-img {
+    width: 40vh;
+    height: 25vh;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    transition: 0.4s;
+}
+
+.about-img:hover {
+    transform: scale(1.05);
+}
+
+.about-text {
+    max-width: 50vh;
+    text-align: left;
+}
+
+.about-text h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.8vh;
+    margin-bottom: 1vh;
+}
+
+.about-text p {
+    font-size: 2vh;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.85);
 }
